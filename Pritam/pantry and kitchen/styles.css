@@ -2,32 +2,46 @@
 *{
     margin: 0px;
     padding: 0px;
-    border-radius: 5px;
+    box-sizing: border-box;
 }
 .home_position{
     display: flex;
     justify-content: space-between;
+    padding: 32px;
 }
 .home{
     display: flex;
     list-style-type: none;
     gap:2em;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fafafa;
+#position{
+    padding: 0.5rem;
+}
+/* section 1 second part */
+.fixed-option{
+    width: 15%;
+    height: 200px;
+    background-color: red;
+}
+.Whole-items{
+    display: flex;
+    padding:32;
+
 }
 
 /* Grid Container */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
+}
+h1{
+    padding-bottom: 2rem;
+    padding-left: 2.5rem;
 }
 
 /* Product Card */
@@ -63,10 +77,12 @@ body {
 .wishlist-btn {
     border: none;
     background-color: #eee;
-    padding: 10px 15px;
     font-size: 16px;
     border-radius: 8px;
+    min-height: 40px;
+    min-width: 2rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s;
+
 }
 
