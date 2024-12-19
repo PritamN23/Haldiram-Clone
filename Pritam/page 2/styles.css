@@ -3,6 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* section 1 second part */
+.fixed-option {
+  width: 15%;
+  height: 200px;
+  background-color: red;
+}
+.Whole-items {
+  display: flex;
+}
 /*-----------------------------header start from here----------------------------*/
 ::-webkit-scrollbar {
   width: 10px;
@@ -11,6 +21,7 @@
 }
 body {
   overflow-x: hidden;
+
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -242,13 +253,6 @@ header {
 .location-btn:hover {
   border: 1px solid #e31837;
 }
-.category-image img {
-  height: 200px;
-  width: 200px;
-}
-.mega-menu-categories {
-  display: flex;
-}
 
 .category-item {
   position: relative;
@@ -257,6 +261,7 @@ header {
 .mega-menu {
   position: absolute;
   top: 160%;
+
   width: 150vw;
   background: white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -271,32 +276,32 @@ header {
 
 #savouries {
   left: 0%;
-  transform: translateX(-23%);
+  transform: translateX(-33%);
 }
 
 #mithai {
   left: 0%;
-  transform: translateX(-30%);
+  transform: translateX(-39%);
 }
 
 #bakery {
   left: 0%;
-  transform: translateX(-36%);
+  transform: translateX(-44%);
 }
 
 #ready-to-eat {
   left: 0%;
-  transform: translateX(-53.5%);
+  transform: translateX(-55.5%);
 }
 
 #pantry {
   left: 0%;
-  transform: translateX(-61%);
+  transform: translateX(-60%);
 }
 
 #trail {
   left: 0%;
-  transform: translateX(-73%);
+  transform: translateX(-69%);
 }
 
 .category-item:hover .mega-menu {
@@ -353,16 +358,22 @@ header {
 
 /*----------------------------------------main cards--------------------------------------------------*/
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
 .prit {
   display: flex;
-  position: relative;
+  margin-top: 20px;
 }
 .sidebar-product {
   display: flex;
   /* width: 100%; */
   margin-left: 60px;
   margin-top: 200px;
-  position: relative;
 }
 
 .left-list {
@@ -401,8 +412,6 @@ header {
   width: 348px;
   height: 510px;
   margin: 0px 50px 10px 0px;
-  display: flex;
-  flex-wrap: wrap;
 }
 .product-list:hover {
   cursor: pointer;
@@ -498,6 +507,8 @@ a:hover {
 .description-heading {
   margin-top: 50px;
   margin-left: 60px;
+  list-style-type: none;
+  word-wrap: break-word;
 }
 
 .footer-heading {
