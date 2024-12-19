@@ -196,8 +196,8 @@ background: rgb(39, 37, 37); /* Darker shade on hover*/
 
 
 body{
-  overflow-x: none;
-  
+  overflow-x: hidden;
+  width: 100vw;
   margin-left: -10px;
   margin-right: -10px;
   
@@ -620,6 +620,7 @@ header {
   z-index: 500;
   left: 0;
   right: 0;
+  cursor: pointer;
 }
 
 .banner-slides {
@@ -646,7 +647,7 @@ header {
   display: flex;
   gap: 10px;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .banner-dot {
