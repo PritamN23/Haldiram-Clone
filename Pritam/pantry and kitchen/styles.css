@@ -463,8 +463,7 @@ a:hover {
   cursor: pointer;
 }
 /*--------------------------------------------------------------------*/
-.discover-product {
-}
+
 .available-items {
   display: flex;
   justify-content: space-between;
