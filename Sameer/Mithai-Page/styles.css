@@ -2,75 +2,55 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: auto;
+
 }
 
-/* Header-start */
 
-::-webkit-scrollbar {
-  width: 10px;
-  scrollbar-color: red;
-  color: #B31942;
-}
-body{
-  overflow-x: hidden;
-  
-  margin-left: -10px;
-  margin-right: -10px;
-  
+/* ****Scroll-Bar-Style******* */
+
+body::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height for horizontal scrollbar */
 }
 
-.scrolling-text {
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  display: inline-block;
-  font-size: 18px;
-  margin: auto;
-  position: fixed;
-  top: 152px;
-  color: #fff;
-  font-family: "Coconat";
-  z-index: 1001;
-}
-.scrolling-text svg {
-  font-size: 18px;
-}
-.scroll-animation {
-  display: inline-block;
-  animation: scroll-right-to-left 40s linear infinite;
+
+/* The scrollbar track (background) */
+body::-webkit-scrollbar-track {
+  background: #c19a6b; /* Light grey background */
+  border-radius: 10px; /* Rounded corners */
 }
 
-@keyframes scroll-right-to-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+
+/* The scrollbar handle (thumb) */
+body::-webkit-scrollbar-thumb {
+  background: rgb(163, 12, 12); /* Custom color for scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for thumb */
 }
 
-@font-face {
-  font-family: "Coconat";
-  src: url("fonts/Coconat-Regular.otf") format("otf"),
-    url("fonts/Coconat-BoldExt.otf") format("otf");
-  font-weight: normal;
-  font-style: normal;
-}
+/* Scrollbar thumb on hover */ 
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(39, 37, 37); /* Darker shade on hover*/
+} 
+
+
+/* --------------------------------------------------------  */
+
 
 .site-header {
   font-family: system-ui, -apple-system, sans-serif;
   width: 100vw;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+
+
 }
 
 .main-nav {
-  max-width: 1400px;
+  max-width: 100vw;
   margin: 0 auto;
   padding: 0 16px;
-  font-family: "Coconat", serif;
+  font-family: 'Coconat', serif;
 }
 
 header {
@@ -80,8 +60,9 @@ header {
   margin: none;
   top: 0;
   position: fixed;
-  z-index: 1000;
+
 }
+
 .nav-wrapper {
   display: flex;
   gap: 32px;
@@ -91,12 +72,10 @@ header {
 .logo {
   flex-shrink: 0;
   padding-top: 8px;
-  margin-right: 50px;
 }
 
 .logo img {
-  position: absolute;
-  width: 180px;
+  width: 150px;
   height: auto;
 }
 
@@ -106,6 +85,7 @@ header {
   flex-direction: column;
   gap: 16px;
 }
+
 
 .top-row {
   display: flex;
@@ -146,13 +126,13 @@ header {
   cursor: pointer;
   border-radius: 0px 0px 0px 0px;
   width: 250px;
-  height: 35px;
+  height: 20px;
   position: relative;
 }
 
 .search-input {
   flex: 1;
-  padding: 8px 2px 8px 20px;
+  padding: 8px 12px;
   font-size: 14px;
   border-radius: 20px 20px 25px 20px;
   width: 270px;
@@ -207,6 +187,7 @@ header {
   margin-left: auto;
 }
 
+
 .bottom-row {
   display: flex;
   justify-content: space-between;
@@ -238,6 +219,7 @@ header {
 }
 
 .categories li a:hover {
+
   text-decoration: underline;
   background-size: 100% 2px;
 }
@@ -249,6 +231,67 @@ header {
 .location-btn:hover {
   border: 1px solid #e31837;
 }
+
+
+@media (max-width: 1024px) {
+  .categories {
+    gap: 16px;
+  }
+
+  .search-container {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-content {
+    width: 100%;
+  }
+
+  .top-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .top-right {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .search-container {
+    width: 100%;
+    order: 1;
+  }
+
+  .bottom-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .categories {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .categories li {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 8px 0;
+  }
+
+  .nav-end {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+
+
 
 
 
@@ -270,37 +313,41 @@ header {
   padding: 32px 0;
   display: flex;
   justify-content: center;
+
 }
 
 #savouries {
   left: 0%;
-  transform: translateX(-33%);
+  transform: translateX(-23%);
 }
 
 #mithai {
   left: 0%;
-  transform: translateX(-39%);
+  transform: translateX(-30%);
 }
 
 #bakery {
   left: 0%;
-  transform: translateX(-44%);
+  transform: translateX(-36%);
 }
 
 #ready-to-eat {
   left: 0%;
-  transform: translateX(-55.5%);
+  transform: translateX(-53.5%);
 }
 
 #pantry {
   left: 0%;
-  transform: translateX(-60%);
+  transform: translateX(-61%);
 }
 
 #trail {
   left: 0%;
-  transform: translateX(-69%);
+  transform: translateX(-73%);
 }
+
+
+
 
 .category-item:hover .mega-menu {
   opacity: 1;
@@ -324,7 +371,7 @@ header {
 }
 
 .mega-menu-header h2 {
-  font-family: "Coconat", serif;
+  font-family: 'Coconat', serif;
   font-size: 32px;
   margin-bottom: 16px;
   color: #333;
@@ -358,6 +405,7 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 24px;
+
 }
 
 .category-card {
@@ -385,6 +433,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 
 .category-info {
@@ -428,22 +477,89 @@ header {
   background: #b88844;
 }
 
-/* Header-End */
+@media (max-width: 1024px) {
+  .mega-menu {
+    position: static;
+    box-shadow: none;
+    padding: 16px 0;
+  }
+
+  .mega-menu-categories {
+    flex-direction: column;
+  }
+
+  .mega-menu-header {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-content {
+    width: 100%;
+  }
+
+  .top-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .top-right {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .search-container {
+    width: 100%;
+    order: 1;
+  }
+
+  .bottom-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .categories {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .categories li {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 8px 0;
+  }
+
+  .nav-end {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* **************Header-End*********************** */
+
+/* main-Content-Start */
+body {
+  overflow-x: hidden;
+}
 
 .main-container {
-  position: relative;
-  width: 100vh;
   height: 100vh;
-
+  width: 100vh;
 }
 
 .container-1 {
   position: relative;
   display: flex;
   height: 650px;
-  width: 1536px;
+  width: 1540px;
   overflow-x: hidden;
   align-items: flex-end;
+
 }
 
 .mithai-banner {
@@ -505,7 +621,8 @@ header {
   height: 100%;
   width: 100%;
 }
-.selector:hover{
+
+.selector:hover {
   border-color: #922637;
   cursor: pointer;
 }
@@ -546,12 +663,15 @@ header {
   height: 510px;
   margin: 0px 50px 10px 0px;
 }
-.product-list:hover{
+
+.product-list:hover {
   cursor: pointer;
 }
-a:hover{
-cursor: pointer;
+
+a:hover {
+  cursor: pointer;
 }
+
 .card-height {
   border-left: 2px solid #f3812a93;
   border-right: 2px solid #f3812a93;
@@ -602,9 +722,12 @@ cursor: pointer;
   width: 42px;
   height: 32px;
 }
-.heart-button:hover,.add-button:hover{
+
+.heart-button:hover,
+.add-button:hover {
   cursor: pointer;
 }
+
 .add-button {
   border-color: rgba(0, 0, 0, 0.36);
   border-radius: 5px;
@@ -637,6 +760,8 @@ cursor: pointer;
   transition: transform 1s ease;
 }
 
+
+
 .discover-product {
   overflow-y: hidden;
   background-color: #DA0428;
@@ -668,7 +793,11 @@ cursor: pointer;
 }
 
 
-/* Footer(Aman-repo) */
+/* ******Main-Content-End */
+
+
+/* ******Footer Start  ****** */
+
 .site-footer {
   background-color: #fff;
   font-family: "Concat";
@@ -1168,3 +1297,5 @@ main {
 .enter-address:hover {
   border-color: #8B4C8C;
 }
+
+/* ****Footer-End***** */
