@@ -100,9 +100,7 @@
     margin-right: 2rem;
   }
   @media (max-width:480px){
-    .left-list{
-      
-    }
+    
     .sidebar-product{
        align-items: center;
       flex-direction: column;
